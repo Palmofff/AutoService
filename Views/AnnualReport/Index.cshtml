@@ -1,0 +1,56 @@
+﻿@model IEnumerable<AnnualReportModel>
+
+
+
+
+<h1>Annual report</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MechanicName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfOrders)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfReworks)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MechanicName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfOrders)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfReworks)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
